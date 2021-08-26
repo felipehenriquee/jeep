@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/style.css">      
+    <title>Jeep - Home</title>  
+    <!-- Import the component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53NXGRY8VJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-53NXGRY8VJ');
+    </script>
+
+</head>   
+<body>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-four-fifths">
+            <h1 class="title">
+              JavaScript Camera
+            </h1>
+            <video autoplay id="video"></video>
+            
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          By <a href="https://www.webdevdrops.com/">Douglas Matoso</a> | <a
+            href="https://github.com/doug2k1/javascript-camera">Source code</a>
+        </p>
+      </div>
+    </footer>
+  
+    <canvas class="is-hidden" id="canvas"></canvas>
+    <script type="text/javascript" src="./js/camera.js"></script>
+    
+  </body>
+</html>
