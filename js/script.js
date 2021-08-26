@@ -1,5 +1,5 @@
 const dadoSalvo = window.localStorage.getItem("cadastrado");
-const endereco = "https://felipehenriquee.github.io/jeep"
+const endereco = "http://127.0.0.1:8887"
 // const endereco = "https://simplexr.bugaboostudio.com/jeep"
 
 const url = `http://147.182.210.54:3000/user`;
@@ -16,7 +16,7 @@ if(window.location.href == endereco+"/home.html"){
     setTimeout( function() {
         const elemento = document.getElementById("loading");
         elemento.classList.add("hide")
-      }, 12000 );
+      }, 1000 );
 }
 
 
@@ -82,9 +82,13 @@ function cadastrar(){
 function goModel(){
     const isMobile = this.detectar_mobile();
     if (isMobile){
-        window.location.href = "https://mywebar.com/p/Project_8_dnxwnntzhq"
+        // window.location.href = "https://mywebar.com/p/Project_8_dnxwnntzhq"
+        window.location.href = endereco+"/camera.html"
+
     }
     else{
-        window.location.href = endereco+"/model.html"
+        // window.location.href = endereco+"/model.html"
+        window.location.href = endereco+"/camera.html"
+
     }
 }
