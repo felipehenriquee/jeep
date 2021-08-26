@@ -1,5 +1,5 @@
 const dadoSalvo = window.localStorage.getItem("cadastrado");
-const endereco = "http://127.0.0.1:8887"
+const endereco = "https://felipehenriquee.github.io/jeep"
 // const endereco = "https://simplexr.bugaboostudio.com/jeep"
 
 const url = `http://147.182.210.54:3000/user`;
