@@ -68,3 +68,17 @@
   
     initializeCamera();
   })();
+
+$(document).ready(function()
+		{
+			$("#btnScreenshot").on('click', function(e)
+			{
+				html2canvas(document.body, {
+					taintTest: true,
+	  				onrendered: function(canvas) {
+	  					$("#img1").attr('src', canvas.toDataURL());
+	    				//document.body.appendChild(canvas);
+	  				}			
+	  			});
+			});	
+		});	
