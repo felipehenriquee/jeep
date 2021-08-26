@@ -9,8 +9,7 @@
   
     // get page elements
     const video = document.querySelector("#video");
-    const btnScreenshot = document.querySelector("#btnScreenshot");
-    const canvas = document.querySelector("#canvas");
+    
     
   
     // video constraints
@@ -36,14 +35,7 @@
     let videoStream;
   
     
-    btnScreenshot.addEventListener("click", function () {
-        const img = document.createElement("img");
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        canvas.getContext("2d").drawImage(video, 0, 0);
-        img.src = canvas.toDataURL("image/png");
-        screenshotsContainer.prepend(img);
-      });
+    
     // stop video stream
     function stopVideoStream() {
       if (videoStream) {
