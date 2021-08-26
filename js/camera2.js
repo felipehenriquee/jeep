@@ -36,14 +36,14 @@
     let videoStream;
   
     
-    btnScreenshot.addEventListener("click", function () {
-        const img = document.createElement("img");
-        canvas.width = video.videoWidth/2;
-        canvas.height = video.videoHeight/2;
-        canvas.getContext("2d").drawImage(video, 0, 0);
-        img.src = canvas.toDataURL("image/png");
-        screenshotsContainer.prepend(img);
-      });
+//     btnScreenshot.addEventListener("click", function () {
+//         const img = document.createElement("img");
+//         canvas.width = video.videoWidth/2;
+//         canvas.height = video.videoHeight/2;
+//         canvas.getContext("2d").drawImage(video, 0, 0);
+//         img.src = canvas.toDataURL("image/png");
+//         screenshotsContainer.prepend(img);
+//       });
     // stop video stream
     function stopVideoStream() {
       if (videoStream) {
