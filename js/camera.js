@@ -1,47 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="./css/style.css">      
-    <title>Jeep - Câmera</title>  
-    <!-- Import the component -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script type="text/javascript" src="./js/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53NXGRY8VJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-53NXGRY8VJ');
-    </script>
-
-</head>   
-<body>
-    <section class="section">
-        <div style="position: absolute; width: 100%; height: 100vh;">
-            <div class="cabecalho centralizado" style="width: 100%;">
-                <h5 style="text-align: center; color: black;">NOVO JEEP</h5>
-                <img src="./assets/logoCommander.png" alt="" style="width: 80%;">
-                
-            </div>
-        </div>
-        <iframe src="https://erylioni.sirv.com/Spins/Jeep/Jeep.spin" width="100%" height="100%" frameborder="0" allowfullscreen style="position: absolute; z-index:1"></iframe>
-        <video autoplay id="video" style="width:100%; heigth:110vh" playsinline autoplay muted loop></video>
-        <button class="button is-success" id="btnScreenshot">
-            <span class="icon is-small">
-              <i class="fas fa-camera"></i>
-            </span>
-          </button>
-          <canvas class="is-hidden" id="canvas"></canvas>
-    </section>
+(function() {
+    if (
+      !"mediaDevices" in navigator ||
+      !"getUserMedia" in navigator.mediaDevices
+    ) {
+      alert("Câmera não está disponível nesse navegador");
+      return;
+    }
   
-    <script type="text/javascript" src="./js/camera.js"></script>
-  </body>
-</html>
+    // get page elements
+    const video = document.querySelector("#video");
+    const btnScreenshot = document.querySelector("#btnScreenshot");
+    const canvas = document.querySelector("#canvas");
+    
+  
+    // video constraints
+    const constraints = {
+      video: {
+        width: {
+          min: 1280,
+          ideal: 1920,
+          max: 2560,
+        },
+        height: {
+          min: 720,
+          ideal: 1080,
+          max: 1440,
+        },
+      },
+    };
+  
+    // use front face camera
+    let useFrontCamera = false;
+  
+    // current video stream
+    let videoStream;
+  
+    
+    btnScreenshot.addEventListener("click", function () {
+        const img = document.createElement("img");
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext("2d").drawImage(video, 0, 0);
+        img.src = canvas.toDataURL("image/png");
+        screenshotsContainer.prepend(img);
+      });
+    // stop video stream
+    function stopVideoStream() {
+      if (videoStream) {
+        videoStream.getTracks().forEach((track) => {
+          track.stop();
+        });
+      }
+    }
+  
+    // initialize
+    async function initializeCamera() {
+      stopVideoStream();
+      constraints.video.facingMode = useFrontCamera ? "user" : "environment";
+  
+      try {
+        videoStream = await navigator.mediaDevices.getUserMedia(constraints);
+        video.srcObject = videoStream;
+      } catch (err) {
+        alert("A Câmera não pode ser acessada");
+      }
+    }
+  
+    initializeCamera();
+  })();
