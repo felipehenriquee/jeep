@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/style.css">      
+    <title>Jeep - Cadastro</title>  
+    <!-- Import the component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53NXGRY8VJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-53NXGRY8VJ');
+    </script>
+
+</head>   
+<body >
+    <div class="paginaInicial centralizado" style="background-image: url('./assets/background.png');">
+        <div class="centralizado conteudo">
+            <!-- cabecalho -->
+            <div class="cabecalho centralizado">
+                <h5>NOVO JEEP</h5>
+                <img src="./assets/logoCommander.png" alt="">
+                <p>TENHA UMA <b>EXPERIÊNCIA EM <br> REALIDADE AUMENTADA </b> COM SEU NOVO SUV.</p>
+            </div>
+            <!-- fim cabecalho -->
+
+            <!-- Formulario -->
+            <form >
+                <div class="formulario centralizado">
+                    <div class="input-container ic1">
+                        <input id="name" class="input" type="text" placeholder=" " />
+                        <div class="cut"></div>
+                        <label for="name" class="placeholder" style="background-color: transparent;">Nome *</label>
+                      </div>
+                      <div class="input-container ic2">
+                        <input id="sap" class="input" type="text" placeholder=" " />
+                        <div class="cut"></div>
+                        <label for="sap" class="placeholder" style="background-color: transparent;">SAP ID/IDENTIFIANT *</label>
+                      </div>
+                      <!-- <div class="input-container ic2">
+                        <input id="localidade" class="input" type="text" placeholder=" " />
+                        
+                        <div class="cut cut-short"></div>
+                        <label for="localidade" class="placeholder" style="background-color: transparent;">Localidade *</label>
+                      </div> -->
+                      <div class="input-container ic2" style="display: flex; flex-direction: column;">
+                        <label for="localidade" style="color: rgba(255, 255, 255, 0); margin-top: 2%; font-size: 12px; margin-left:2%">Localidade</label>
+                        <select id="localidade" class="select">
+                            <option value="" selected disabled hidden>Localidade*</option>
+                            <option value="Planta Betim">Planta Betim</option>
+                            <option value="Planta Goiana">Planta Goiana</option>    
+                            <option value="Planta Porto Real">Planta Porto Real</option>
+                            <option value="Planta Motores Campo Largo">Planta Motores Campo Largo</option>
+                            <option value="Planta CMA">Planta CMA</option>
+                            <option value="Supplier Park">Supplier Park</option>
+                            <option value="Planta CMP">Planta CMP</option>
+                            <option value="Planta PCMA">Planta PCMA</option>
+                            <option value="Planta Autopeças Jaboatão dos Guararapes">Planta Autopeças Jaboatão dos Guararapes</option>
+                            <option value="Escritório São Paulo">Escritório São Paulo</option>
+                            <option value="Escritórios Regionais">Escritórios Regionais</option>
+                            <option value="Casa Fiat de Cultura">Casa Fiat de Cultura</option>
+                            <option value="Centro de Engenharia PE">Centro de Engenharia PE</option>
+                            <option value="FCA Saúde">FCA Saúde</option>
+                            <option value="FCA Services">FCA Services</option>
+                            <option value="Isvor">Isvor</option>
+                            <option value="RIMACO">RIMACO</option>
+                            <option value="Outra">Outra</option>
+                        </select>
+                        
+                        <div class="cut cut-short"></div>
+                      </div>
+                      <a id="link" class="btnConfirmar centralizado"  onClick="cadastrar()" style="color: white;">Entrar</a>
+                      <small id="validacao" class="form-text hide" style="color: rgb(253, 53, 53);">Campo Inválido</small>
+                </div>
+                
+                
+            </form>
+            <!-- fim Formulário -->
+            <!-- carro inferior -->
+            <div class="centralizado imagemCarro">
+                <img src="./assets/carro.png" alt="">
+                
+                
+
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Use it like any other HTML element -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+</body>
+
+
+

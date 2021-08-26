@@ -1,0 +1,270 @@
+/* Pagina Home */
+@font-face {
+    font-family: din;
+    src: url("./../assets/fontes/din.otf");
+ }
+
+ @font-face {
+    font-family: dinBold;
+    src: url("./../assets/fontes/dinCondesedBold.otf");
+ }
+ @font-face {
+    font-family: dinMedium;
+    src: url("./../assets/fontes/DINMedium.ttf");
+ }
+ @font-face {
+    font-family: "DinAlternate";
+    src: url("./../assets/fontes/DINRegularAlternate.ttf");
+ }
+ @font-face {
+    font-family: dinLightAlternate;
+    src: url("./../assets/fontes/DINLightAlternate.ttf");
+ }
+ @font-face {
+    font-family: dinBoldAlternate;
+    src: url("./../assets/fontes/DINBlackAlternate.ttf");
+ }
+ @font-face {
+    font-family: dinMediumAlternate;
+    src: url("./../assets/fontes/DINMediumAlternate.ttf");
+ }
+ body{
+     font-family: 'din';
+ }
+ .centralizado{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    
+}
+.paginaInicial{
+    
+    width: 100%; 
+    height: 100vh;
+    min-height: 620px;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.conteudo{
+    height: 100%;
+    
+    max-width: 360px;
+    justify-content: space-between;
+    
+    
+}
+
+
+/* cabeçalho */
+.cabecalho{
+    color: white;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+    margin-top:10%;
+}
+.cabecalho h5{
+    font-family: 'dinBold';
+    letter-spacing: .3rem;
+}
+.cabecalho p{
+    font-size: 11px;
+    
+}
+.cabecalho img{
+    width: 110%;
+    margin-bottom: 10%;
+}
+/* fim cabeçalho */
+
+/* formulario */
+.formulario{
+    width: 100%;
+    height: 100%;
+    margin-top:-8%;
+    flex-direction: column;
+    
+}
+.conteudo{
+    flex-direction: column;
+    
+}
+.formulario input, select{
+    background-color: black ;
+    border: 0px;
+    box-shadow: 1px 1px 140px 20px rgba(190, 190, 190, 0.164);
+    border-radius: 2px;
+    margin-top: 20px;
+    height: 40px;
+    width: 250px;
+    outline: 0;
+    color: rgba(255, 255, 255, 0.787);
+    font-family: 'din';
+}
+select{
+    margin-top:20px;
+    color: rgba(194, 194, 194, 0.329);
+    height: 500px;
+}
+
+.btnConfirmar{
+    background-color: black;
+    width: 100px;
+    height: 50px;
+    color: aliceblue;
+    margin-top: 38px;
+    box-shadow: 1px 1px 20px 5px rgba(190, 190, 190, 0.164);
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.input-container {
+    height: 60px;
+    position: relative;
+    width: 100%;    
+  }
+  
+  .ic1 {
+    margin-top: 10px;
+  }
+  
+  .ic2 {
+    margin-top: 20px;
+  }
+  
+ 
+  
+  .cut {
+    
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+  }
+  
+  .cut-short {
+    width: 50px;
+  }
+  
+  .input:focus ~ .cut,
+  .input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+  }
+  
+  .placeholder {
+    color: rgba(255, 255, 255, 0.685);
+    font-family: sans-serif;
+    left: 10px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 32px;
+    
+  }
+ 
+  
+  .input:focus ~ .placeholder,
+  .input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(0px) scale(0.75);
+  }
+  
+  .input:not(:placeholder-shown) ~ .placeholder {
+    color: rgba(255, 255, 255, 0.685);
+  }
+  
+  .input:focus ~ .placeholder {
+    color: white;
+  }
+  /* fim formulario */
+  /* foto carro */
+  .imagemCarro{
+      width: 90%;
+
+  }
+  .imagemCarro img{
+      width: 90%;
+  }
+  /* fim foto carro */
+  /* home */
+  .paginaCompleta{
+      position: relative;
+      
+      width: 100%;
+      max-width: 460px;
+      height: 100vh;
+        min-height: 740px;
+      
+      
+  }
+  .home{
+    position: absolute; 
+    top:0; 
+    left: 0; 
+    width: 100%;
+    height:55%; 
+     
+    background-image: url("./../assets/background.jpg");
+    z-index: 10;
+  }
+  /* passos */
+  .passos{
+    color: white;
+    flex-direction: column;
+    width: 80%;
+    
+    margin-top:2%;
+}
+.passos h5{
+    font-family: 'dinBold';
+    letter-spacing: .3rem;
+}
+.passos p{
+    font-size: 11px;
+    
+}
+.btnAr{
+    z-index:11; 
+    background-color: black;
+    width: 100px;
+    height: 35px;
+    color: aliceblue;
+    
+    box-shadow: 1px 1px 8px 5px rgba(190, 190, 190, 0.164);
+    border-radius: 3px;
+    position: absolute; 
+    top: 89%; 
+    left:39%;
+    border: 0px;
+}
+/* fim passos */
+/* loading */
+.loading{
+    position: absolute;
+    width: 100%; 
+    height: 100vh;
+    background-color: rgb(27, 27, 27);
+    z-index: 100;
+}
+.loading img{
+    width: 50%;
+}
+.hide{
+    display: none;
+}
+.carroHome{
+    position: absolute;
+    width: 360px;
+    bottom: 0;
+}
+.carroHome img{
+    width: 90%;
+}

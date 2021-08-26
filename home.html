@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/style.css">      
+    <title>Jeep - Home</title>  
+    <!-- Import the component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53NXGRY8VJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-53NXGRY8VJ');
+    </script>
+
+</head>   
+<body class="centralizado" style="background-image: url('./assets/background.jpg');" >
+    <div class="paginaCompleta centralizdo" style="background-image: url('./assets/background.png');">
+        <div class="loading centralizado" id="loading" >
+            <img src="./assets/loader.gif" alt="">
+        </div>
+        <!-- Use it like any other HTML element -->
+        <div class="home">
+            <div class="centralizado">
+                <div class="centralizado conteudo">
+                    <!-- cabecalho -->
+                    <div class="cabecalho centralizado">
+                        <h5>NOVO JEEP</h5>
+                        <img src="./assets/logoCommander.png" alt="">
+                        <p>CONFIRA COMO CURTIR ESSA EXPERIÊNCIA.</p>
+                    </div>
+                    <!-- fim cabecalho -->
+                    <div class="passos">
+                        <h5>PASSO 1:</h5>
+                        <p>TOQUE EM INICIAR PARA COMEÇAR A REALIDADE AUMENTADA</p>
+                        <h5>PASSO 2:</h5>
+                        <p>APONTE A CÂMERA PARA O CHÃO</p>
+                        <h5>PASSO 3:</h5>
+                        <p>USE OS DEDOS PARA ALTERAR O TAMANHO DO CARRO</p>
+                        <h5>PASSO 4:</h5>
+                        <p>AGORA É SÓ APRECIAR A EXPERIÊNCIA EM REALIDADE AUMENTADA</p>
+                    </div>
+                    
+                    
+                    
+                </div>
+        
+            </div>
+        </div>
+        
+    
+        <model-viewer ar_preferred id="model-viewer" poster="./assets/background.png"
+        camera-controls auto-rotate alt="A 3D model of a sphere" src="./assets/modelo/scene.glb"  
+        shadow-intensity="1" ar ar-modes="scene-viewer quick-look webxr" camera-controls alt="A 3D model carousel" 
+        ios-src="./assets/modelo/scene.usdz"
+        style="width: 100%; height: 68%">
+        <button slot="ar-button" class="btnAr">
+            INICIAR
+        </button>
+        <button style="z-index:9" class="btnAr" onclick="goModel()">
+            INICIAR
+        </button>
+        </model-viewer>
+        <!-- carro inferior -->
+        <div class="centralizado" style="width: 100%;">
+            <div class="centralizado imagemCarro carroHome" >
+                <img src="./assets/carro.png" alt="">
+                
+            </div>
+        </div>
+        
+        <!-- fim carro inferior -->
+        
+    </div>
+    
+    
+    <!-- Use it like any other HTML element -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+</body>
+
+
+

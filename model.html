@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/style.css">      
+    <title>Jeep - Modelo 3D</title>  
+    <!-- Import the component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53NXGRY8VJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-53NXGRY8VJ');
+        </script>
+</head>   
+<body>
+    <!-- Use it like any other HTML element -->
+    
+    
+
+    <model-viewer ar_preferred id="model-viewer" 
+    camera-controls auto-rotate alt="A 3D model of a sphere" src="./assets/modelo/scene.glb"  
+    shadow-intensity="1" ar ar-modes="scene-viewer quick-look webxr" camera-controls alt="A 3D model carousel" 
+    ios-src="./assets/modelo/scene.usdz"
+    style="width: 100%; height: 100vh;">
+    
+    
+    </model-viewer>
+    
+    
+</body>
+
+
+
