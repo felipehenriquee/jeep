@@ -24,7 +24,7 @@
 </head>   
 <body class="centralizado" style="background-image: url('./assets/background.jpg');" >
     <div class="paginaCompleta centralizdo" style="background-image: url('./assets/background.png');">
-        <div class="loading centralizado hide" id="loading" >
+        <div class="loading centralizado" id="loading" >
             <img src="./assets/loader.gif" alt="">
         </div>
         <!-- Use it like any other HTML element -->
@@ -48,9 +48,7 @@
                         <h5>PASSO 4:</h5>
                         <p>AGORA É SÓ APRECIAR A EXPERIÊNCIA EM REALIDADE AUMENTADA</p>
                     </div>
-                    <button style="z-index:9" class="btnAr2" onclick="goModel()">
-                        INICIAR
-                    </button>
+                    
                     
                     
                 </div>
@@ -59,10 +57,10 @@
         </div>
         
     
-        <!-- <model-viewer ar_preferred id="model-viewer" poster="./assets/background.png"
-        camera-controls auto-rotate alt="A 3D model of a sphere" src="./assets/modelo/scene.glb"  
-        shadow-intensity="1" ar ar-modes="scene-viewer quick-look webxr" camera-controls alt="A 3D model carousel" 
-        ios-src="./assets/modelo/scene.usdz"
+        <model-viewer ar_preferred id="model-viewer" 
+    camera-controls auto-rotate alt="Jeep Commander" src="https://simple-xr-dashboard.s3.sa-east-1.amazonaws.com/models-3d/scene.glb"  
+    shadow-intensity="1" ar ar-modes="scene-viewer quick-look webxr" camera-controls alt="A 3D model carousel" 
+    ios-src="https://simple-xr-dashboard.s3.sa-east-1.amazonaws.com/models-3d/scene.usdz"
         style="width: 100%; height: 68%">
         <button slot="ar-button" class="btnAr">
             INICIAR
@@ -70,7 +68,7 @@
         <button style="z-index:9" class="btnAr" onclick="goModel()">
             INICIAR
         </button>
-        </model-viewer> -->
+        </model-viewer>
         <!-- carro inferior -->
         <div class="centralizado" style="width: 100%;">
             <div class="centralizado imagemCarro carroHome" >
@@ -93,3 +91,4 @@
 
 
 
+	

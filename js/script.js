@@ -1,8 +1,8 @@
-const dadoSalvo = window.localStorage.getItem("cadastrado");
-const endereco = "https://felipehenriquee.github.io/jeep"
+const dadoSalvo = window.localStorage.getItem("cadastrou-se");
+const endereco = "http://127.0.0.1:8887"
 // const endereco = "https://simplexr.bugaboostudio.com/jeep"
 
-const url = `http://147.182.210.54:3000/user`;
+const url = `https://fan.dev.br:3000/user`;
 
 
 if (dadoSalvo && (window.location.href == endereco+"/" || window.location.href == endereco+"/index.html") ){
@@ -16,7 +16,7 @@ if(window.location.href == endereco+"/home.html"){
     setTimeout( function() {
         const elemento = document.getElementById("loading");
         elemento.classList.add("hide")
-      }, 1000 );
+      }, 10000);
 }
 
 
@@ -28,19 +28,22 @@ function irParaAr(){
 }
 
 const salvarDados = (name, sapid, localidade) =>{
-    
-    fetch(url,{
-        method:"post",
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-        body: JSON.stringify({name: name, sapid: sapid, localidade: localidade})
-    })
-    .then(res => res.json())
-    .then(users => {
+    localStorage.setItem("cadastrou-se", true);
+        this.irParaAr();
         console.log(users)
-    })
+    
+    // fetch(url,{
+    //     method:"post",
+    //     headers: {
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json'
+    //       },
+    //     body: JSON.stringify({name: name, sapid: sapid, localidade: localidade})
+    // })
+    // .then(res => res.json())
+    // .then(users => {
+    //     
+    // })
 }
 function detectar_mobile() {
     var check = false; //wrapper no check
@@ -70,8 +73,7 @@ function cadastrar(){
     else{
         try {
             salvarDados(name, sap, localidade);
-            localStorage.setItem("cadastrado", true);
-            this.irParaAr();
+            
         } catch (error) {
             document.getElementById("validacao").innerHTML = "Ocorreu um erro"
         }
@@ -82,13 +84,9 @@ function cadastrar(){
 function goModel(){
     const isMobile = this.detectar_mobile();
     if (isMobile){
-        // window.location.href = "https://mywebar.com/p/Project_8_dnxwnntzhq"
-        window.location.href = endereco+"/camera.html"
-
+        window.location.href = endereco+"/model-ar.html"
     }
     else{
-        // window.location.href = endereco+"/model.html"
-        window.location.href = endereco+"/camera.html"
-
+        window.location.href = endereco+"/model.html"
     }
 }

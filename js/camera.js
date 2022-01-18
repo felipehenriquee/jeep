@@ -1,15 +1,13 @@
 (function() {
     if (
-      !"mediaDevices" in navigator ||
-      !"getUserMedia" in navigator.mediaDevices
+      !"mediaDevices" in navigator 
     ) {
-      alert("Câmera não está disponível nesse navegador");
+      alert("Camera API is not available in your browser");
       return;
     }
   
     // get page elements
     const video = document.querySelector("#video");
-    
     
   
     // video constraints
@@ -29,13 +27,23 @@
     };
   
     // use front face camera
-    let useFrontCamera = false;
+    let useFrontCamera = true;
   
     // current video stream
     let videoStream;
   
+    // handle events
     
-    
+  
+    // take screenshot
+
+    // switch camera
+    // btnChangeCamera.addEventListener("click", function () {
+    //   useFrontCamera = !useFrontCamera;
+  
+    //   initializeCamera();
+    // });
+  
     // stop video stream
     function stopVideoStream() {
       if (videoStream) {
@@ -54,7 +62,7 @@
         videoStream = await navigator.mediaDevices.getUserMedia(constraints);
         video.srcObject = videoStream;
       } catch (err) {
-        alert("A Câmera não pode ser acessada");
+        alert("Could not access the camera");
       }
     }
   

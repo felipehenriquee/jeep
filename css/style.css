@@ -245,18 +245,6 @@ select{
     left:39%;
     border: 0px;
 }
-.btnAr2{
-    z-index:11; 
-    background-color: black;
-    width: 100px;
-    height: 35px;
-    color: aliceblue;
-    
-    box-shadow: 1px 1px 8px 5px rgba(190, 190, 190, 0.164);
-    border-radius: 3px;
-    margin-top:10%;
-    border: 0px;
-}
 /* fim passos */
 /* loading */
 .loading{
