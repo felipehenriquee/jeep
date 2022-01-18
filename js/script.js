@@ -1,16 +1,16 @@
 const dadoSalvo = window.localStorage.getItem("cadastrou-se");
-// const endereco = "http://127.0.0.1:8887"
-const endereco = "https://felipehenriquee.github.io/jeep"
+const endereco = "http://127.0.0.1:8887"
+// const endereco = "https://simplexr.bugaboostudio.com/jeep"
 
 const url = `https://fan.dev.br:3000/user`;
 
 
-if (dadoSalvo && (window.location.href == endereco+"/" || window.location.href == endereco+"/index.html") ){
-    window.location.href = endereco+"/home.html"
-}
-else if(!dadoSalvo && window.location.href == endereco+"/home.html"){
-    window.location.href = endereco+"/index.html"
-}
+// if (dadoSalvo && (window.location.href == endereco+"/" || window.location.href == endereco+"/index.html") ){
+//     window.location.href = endereco+"/home.html"
+// }
+// else if(!dadoSalvo && window.location.href == endereco+"/home.html"){
+//     window.location.href = endereco+"/index.html"
+// }
 
 if(window.location.href == endereco+"/home.html"){
     setTimeout( function() {
