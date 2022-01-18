@@ -1,6 +1,6 @@
 const dadoSalvo = window.localStorage.getItem("cadastrou-se");
-const endereco = "http://127.0.0.1:8887"
-// const endereco = "https://simplexr.bugaboostudio.com/jeep"
+// const endereco = "http://127.0.0.1:8887"
+const endereco = "https://felipehenriquee.github.io/jeep"
 
 const url = `https://fan.dev.br:3000/user`;
 
