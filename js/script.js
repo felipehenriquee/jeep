@@ -16,7 +16,7 @@ if(window.location.href == endereco+"/home.html"){
     setTimeout( function() {
         const elemento = document.getElementById("loading");
         elemento.classList.add("hide")
-      }, 10000);
+      }, 2000);
 }
 
 
